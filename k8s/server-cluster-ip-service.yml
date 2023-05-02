@@ -7,5 +7,5 @@ spec:
   selector:
     component: server
   ports:
-    - port: { { .Values.ports.api } }
-      targetPort: { { .Values.ports.api } }
+    - port: {{.Values.ports.api}}
+      targetPort: {{.Values.ports.api}}

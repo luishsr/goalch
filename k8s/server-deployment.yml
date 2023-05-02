@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: server-deployment
 spec:
-  replicas: { { .Values.replicaCount } }
+  replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
       component: server
@@ -16,14 +16,14 @@ spec:
         - name: server
           image: stylerhun/multi-server
           ports:
-            - containerPort: { { .Values.ports.api } }
+            - containerPort: {{.Values.ports.api}}
           env:
             - name: PGUSER
               value: postgres
             - name: PGHOST
               value: postgres-cluster-ip-service
             - name: PGPORT
-              value: { { .Values.ports.postgres } }
+              value: {{.Values.ports.postgres}}
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD

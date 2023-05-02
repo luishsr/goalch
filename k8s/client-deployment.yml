@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: client-deployment
 spec:
-  replicas : {{ .Values.replicaCount }}
+  replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
       component: web
@@ -16,4 +16,4 @@ spec:
         - name: client
           image: stylerhun/multi-client
           ports:
-            - containerPort: {{ .Values.ports.client}}
+            - containerPort: {{.Values.ports.client}}

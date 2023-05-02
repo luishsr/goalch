@@ -7,5 +7,5 @@ spec:
   selector:
     component: postgres
   ports:
-    - port: { { .Values.ports.postgres } }
-      targetPort: { { .Values.ports.postgres } }
+    - port: {{.Values.ports.postgres}}
+      targetPort: {{.Values.ports.postgres}}
