@@ -23,7 +23,7 @@ spec:
             - name: PGHOST
               value: postgres-cluster-ip-service
             - name: PGPORT
-              value: {{.Values.ports.postgres}}
+              value: "5432"
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD
