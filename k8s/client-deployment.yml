@@ -16,4 +16,4 @@ spec:
         - name: client
           image: stylerhun/multi-client
           ports:
-            - containerPort: 3000
+            - containerPort: {{ .Values.ports.client}}

@@ -16,14 +16,14 @@ spec:
         - name: server
           image: stylerhun/multi-server
           ports:
-            - containerPort: 5000
+            - containerPort: { { .Values.ports.api } }
           env:
             - name: PGUSER
               value: postgres
             - name: PGHOST
               value: postgres-cluster-ip-service
             - name: PGPORT
-              value: "5432"
+              value: { { .Values.ports.postgres } }
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD
